@@ -156,23 +156,6 @@ require('lazy').setup({
     -- Theme inspired by Atom
     'navarasu/onedark.nvim',
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
-  },
-
-  {
-    -- Set lualine as statusline
-    'nvim-lualine/lualine.nvim',
-    -- See `:help lualine.txt`
-    opts = {
-      options = {
-        icons_enabled = false,
-        theme = 'onedark',
-        component_separators = '|',
-        section_separators = '',
-      },
-    },
   },
 
   {
@@ -230,13 +213,30 @@ require('lazy').setup({
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   { import = 'custom.plugins' },
+  {
+    -- Set lualine as statusline
+    'nvim-lualine/lualine.nvim',
+    -- See `:help lualine.txt`
+    opts = {
+      options = {
+        icons_enabled = false,
+        theme = 'fleet',
+        component_separators = '|',
+        section_separators = '',
+      },
+    },
+  },
+
 }, {})
 
--- Import custom options
-require('options')
+-- Relative Import custom options
+require('custom.options')
 
 -- Import Custom Keymaps
-require('remaps')
+require('custom.remaps')
+
+-- Set colorscheme
+vim.cmd [[colorscheme fleet]]
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
