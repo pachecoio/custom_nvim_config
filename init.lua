@@ -213,20 +213,6 @@ require('lazy').setup({
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   { import = 'custom.plugins' },
-  {
-    -- Set lualine as statusline
-    'nvim-lualine/lualine.nvim',
-    -- See `:help lualine.txt`
-    opts = {
-      options = {
-        icons_enabled = false,
-        theme = 'fleet',
-        component_separators = '|',
-        section_separators = '',
-      },
-    },
-  },
-
 }, {})
 
 -- Relative Import custom options
@@ -236,7 +222,7 @@ require('custom.options')
 require('custom.remaps')
 
 -- Set colorscheme
-vim.cmd [[colorscheme fleet]]
+vim.cmd [[colorscheme tokyonight]]
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -462,14 +448,7 @@ require('mason-lspconfig').setup()
 local servers = {
   -- clangd = {},
   gopls = {},
-  pyright = {
-    python = {
-      analysis = {
-        autoSearchPaths = true,
-        useLibraryCodeForTypes = true,
-      },
-    },
-  },
+  pyright = {},
   rust_analyzer = {},
   tsserver = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
