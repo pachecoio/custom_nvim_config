@@ -37,5 +37,6 @@ vim.cmd([[nnoremap <leader>e :Neotree toggle<cr>]])
 -- close current window
 vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = 'Close current window' })
 
--- Editing commands
+-- Close current buffer with leader cc
+vim.keymap.set('n', '<leader>cc', ':bd<CR>', { desc = 'Close current buffer' })
 
