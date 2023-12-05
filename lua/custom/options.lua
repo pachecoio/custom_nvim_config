@@ -71,4 +71,3 @@ vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 99
 
 vim.opt.list = true
-

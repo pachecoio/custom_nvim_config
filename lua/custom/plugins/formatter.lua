@@ -47,16 +47,21 @@ return {
           -- filetype
           require('formatter.filetypes.any').remove_trailing_whitespace,
         },
+        --
+        -- Ignore filetypes by adding them to this list
+        ignore = {
+          'yaml',
+        },
+
       },
     }
 
     local augroup = vim.api.nvim_create_augroup
     local autocmd = vim.api.nvim_create_autocmd
     augroup('__formatter__', { clear = true })
-      autocmd('BufWritePost', {
+    autocmd('BufWritePost', {
       group = '__formatter__',
-      command = ':Format',
+      command = 'Format',
     })
-
   end,
 }

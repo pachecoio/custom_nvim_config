@@ -28,5 +28,9 @@ return {
         nnoremap <silent> <leader>; :ToggleTerm<CR>
       ]])
     end,
+  },
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
   }
 }

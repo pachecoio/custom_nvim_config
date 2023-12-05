@@ -24,13 +24,6 @@ vim.cmd([[nnoremap <silent> <S-h> :bprevious<CR>]])
 -- vim.keymap.set('n', '<S-l>', '<C-w>l', { desc = 'Go to next buffer' })
 vim.cmd([[nnoremap <silent> <S-l> :bnext<CR>]])
 
-
--- Go to left window
-vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Go to left window' })
-
--- Go to right wtndow
-vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Go to right window' })
-
 -- Toggle NeoTree with leader e
 vim.cmd([[nnoremap <leader>e :Neotree toggle<cr>]])
 
@@ -40,3 +33,8 @@ vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = 'Close current window' })
 -- Close current buffer with leader cc
 vim.keymap.set('n', '<leader>cc', ':bd<CR>', { desc = 'Close current buffer' })
 
+-- vim tmux navigation remappings
+vim.keymap.set('n', '<C-h>', ':TmuxNavigateLeft<CR>', { desc = 'Navigate left' })
+vim.keymap.set('n', '<C-j>', ':TmuxNavigateDown<CR>', { desc = 'Navigate down' })
+vim.keymap.set('n', '<C-k>', ':TmuxNavigateUp<CR>', { desc = 'Navigate up' })
+vim.keymap.set('n', '<C-l>', ':TmuxNavigateRight<CR>', { desc = 'Navigate right' })
