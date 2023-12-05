@@ -38,3 +38,25 @@ vim.keymap.set('n', '<C-h>', ':TmuxNavigateLeft<CR>', { desc = 'Navigate left' }
 vim.keymap.set('n', '<C-j>', ':TmuxNavigateDown<CR>', { desc = 'Navigate down' })
 vim.keymap.set('n', '<C-k>', ':TmuxNavigateUp<CR>', { desc = 'Navigate up' })
 vim.keymap.set('n', '<C-l>', ':TmuxNavigateRight<CR>', { desc = 'Navigate right' })
+
+-- Remap DVORAK to QWERTY if using DVORAK
+if vim.o.keymap == 'dvorak' then
+    -- Remap navigation keys to QWERTY
+    vim.keymap.set('n', 'h', 'j', { desc = 'Navigate left' })
+    vim.keymap.set('n', 'j', 'k', { desc = 'Navigate down' })
+    vim.keymap.set('n', 'k', 'i', { desc = 'Navigate up' })
+    vim.keymap.set('n', 'l', 'l', { desc = 'Navigate right' })
+end
+
+-- Git remaps
+vim.keymap.set('n', '<leader>gs', ':G<CR>', { desc = 'Git status' })
+vim.keymap.set('n', '<leader>ga', ':G add %<CR>', { desc = 'Git add current file' })
+vim.keymap.set('n', '<leader>gA', ':G add .<CR>', { desc = 'Git add all files' })
+vim.keymap.set('n', '<leader>gc', ':G commit<CR>', { desc = 'Git commit' })
+vim.keymap.set('n', '<leader>gp', ':G push<CR>', { desc = 'Git push' })
+vim.keymap.set('n', '<leader>gd', ':G diff<CR>', { desc = 'Git diff' })
+vim.keymap.set('n', '<leader>gb', ':G blame<CR>', { desc = 'Git blame' })
+vim.keymap.set('n', '<leader>gl', ':G log<CR>', { desc = 'Git log' })
+vim.keymap.set('n', '<leader>gf', ':G fetch<CR>', { desc = 'Git fetch' })
+vim.keymap.set('n', '<leader>gF', ':G pull<CR>', { desc = 'Git pull' })
+vim.keymap.set('n', '<leader>gS', ':G stash<CR>', { desc = 'Git stash' })
