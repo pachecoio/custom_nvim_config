@@ -11,8 +11,8 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+vim.keymap.set('n', '<leader>le', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+vim.keymap.set('n', '<leader>lq', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- Navigation
 
@@ -29,6 +29,8 @@ vim.cmd([[nnoremap <leader>e :Neotree toggle<cr>]])
 
 -- close current window
 vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = 'Close current window' })
+-- close and ignore save
+vim.keymap.set('n', '<leader>Q', ':q!<CR>', { desc = 'Close current window and ignore save' })
 
 -- Close current buffer with leader cc
 vim.keymap.set('n', '<leader>cc', ':bd<CR>', { desc = 'Close current buffer' })
