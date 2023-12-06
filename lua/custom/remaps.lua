@@ -63,3 +63,6 @@ vim.keymap.set('n', '<leader>gl', ':G log<CR>', { desc = 'Git log' })
 vim.keymap.set('n', '<leader>gf', ':G fetch<CR>', { desc = 'Git fetch' })
 vim.keymap.set('n', '<leader>gF', ':G pull origin HEAD<CR>', { desc = 'Git pull' })
 vim.keymap.set('n', '<leader>gS', ':G stash<CR>', { desc = 'Git stash' })
+
+-- Create and checkout branch
+vim.keymap.set('n', '<leader>gb', ':G checkout -b ', { desc = 'Git checkout branch' })
