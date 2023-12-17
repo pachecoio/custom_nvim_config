@@ -1,6 +1,6 @@
 return {
-  {
-    "petobens/poet-v",
-    name = "poet-v",
-  }
+  -- {
+  --   "petobens/poet-v",
+  --   name = "poet-v",
+  -- }
 }
