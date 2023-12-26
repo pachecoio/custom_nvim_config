@@ -38,7 +38,9 @@ return {
       -- online, please don't ask me how to install them :)
       ensure_installed = {
         -- Update this to ensure that you have the debuggers for the langs you want
-        -- 'delve',
+        'delve',
+        'elixir-ls',
+        'python',
       },
     }
 
@@ -51,6 +53,9 @@ return {
     vim.keymap.set('n', '<leader>B', function()
       dap.set_breakpoint(vim.fn.input 'Breakpoint condition: ')
     end, { desc = 'Debug: Set Breakpoint' })
+
+    local dapgo = require 'dap-go'
+    vim.keymap.set('n', '<leader>dgt', dapgo.debug_test, { desc = 'Go Debug: Debug nearest test' })
 
     -- Dap UI setup
     -- For more information, see |:help nvim-dap-ui|
