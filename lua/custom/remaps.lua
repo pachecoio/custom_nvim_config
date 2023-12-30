@@ -68,3 +68,14 @@ vim.keymap.set('n', '<leader>gbn', ':G checkout -b ', { desc = 'Git create and c
 vim.keymap.set('n', '<leader>gbc', ':G checkout ', { desc = 'Git checkout branch' })
 vim.keymap.set('n', '<leader>gbl', ':G branch -l<CR>', { desc = 'Git list branches' })
 vim.keymap.set('n', '<leader>gbb', ':G blame<CR>', { desc = 'Git blame' })
+
+-- Obsidian keymaps
+vim.keymap.set('n', '<leader>on', ':ObsidianNew<CR>', { desc = 'Create new note' })
+vim.keymap.set('n', '<leader>oo', ':ObsidianOpen<CR>', { desc = 'Open note' })
+-- Obsidian links
+vim.keymap.set('n', '<leader>olf', ':ObsidianFollowLink<CR>', { desc = 'Follow obsidian link' })
+vim.keymap.set('n', '<leader>olb', ':ObsidianBacklinks<CR>', { desc = 'Get references' })
+vim.keymap.set('n', '<leader>or', ':ObsidianRename<CR>', { desc = 'Rename note' })
+vim.keymap.set('n', '<leader>od', ':ObsidianToday<CR>', { desc = 'Open daily note' })
+vim.keymap.set('n', '<leader>os', ':ObsidianSearch<CR>', { desc = 'Search note' })
+vim.keymap.set('n', '<leader>ot', ':ObsidianTemplate<CR>', { desc = 'Use template' })
