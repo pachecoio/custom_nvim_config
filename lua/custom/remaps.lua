@@ -25,7 +25,7 @@ vim.keymap.set('n', '<leader>lq', vim.diagnostic.setloclist, { desc = 'Open diag
 -- vim.cmd([[nnoremap <silent> <S-l> :bnext<CR>]])
 
 -- Toggle NeoTree with leader e
-vim.cmd([[nnoremap <leader>e :Neotree toggle<cr>]])
+vim.cmd([[nnoremap <leader>m :Neotree toggle<cr>]])
 
 -- close current window
 vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = 'Close current window' })
