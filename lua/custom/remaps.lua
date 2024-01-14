@@ -18,11 +18,11 @@ vim.keymap.set('n', '<leader>lq', vim.diagnostic.setloclist, { desc = 'Open diag
 
 -- Go to previous buffer with H
 -- vim.keymap.set('n', '<S-h>', '<C-^>', { desc = 'Go to previous buffer' })
-vim.cmd([[nnoremap <silent> <S-h> :bprevious<CR>]])
+-- vim.cmd([[nnoremap <silent> <S-h> :bprevious<CR>]])
 
 -- Go to next buffer with shift L
 -- vim.keymap.set('n', '<S-l>', '<C-w>l', { desc = 'Go to next buffer' })
-vim.cmd([[nnoremap <silent> <S-l> :bnext<CR>]])
+-- vim.cmd([[nnoremap <silent> <S-l> :bnext<CR>]])
 
 -- Toggle NeoTree with leader e
 vim.cmd([[nnoremap <leader>e :Neotree toggle<cr>]])
