@@ -79,3 +79,8 @@ vim.keymap.set('n', '<leader>or', ':ObsidianRename<CR>', { desc = 'Rename note' 
 vim.keymap.set('n', '<leader>od', ':ObsidianToday<CR>', { desc = 'Open daily note' })
 vim.keymap.set('n', '<leader>os', ':ObsidianSearch<CR>', { desc = 'Search note' })
 vim.keymap.set('n', '<leader>ot', ':ObsidianTemplate<CR>', { desc = 'Use template' })
+
+-- Terminal keymaps
+-- Exit insert mode within Terminal
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit insert mode within Terminal' })
+
