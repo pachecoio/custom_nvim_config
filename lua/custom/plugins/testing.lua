@@ -8,5 +8,9 @@ return {
     -- remaps
     vim.cmd([[nnoremap <leader>tt :TestNearest<cr>]])
     vim.cmd([[nnoremap <leader>tf :TestFile<cr>]])
+    vim.cmd([[nnoremap <leader>tl :TestLast<cr>]])
+    vim.cmd([[nnoremap <leader>ts :TestSuite<cr>]])
+    vim.cmd([[nnoremap <leader>tc :TestClass<cr>]])
+    vim.cmd([[nnoremap <leader>tv :TestVisit<cr>]])
   end,
 }

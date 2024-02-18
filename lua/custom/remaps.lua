@@ -83,5 +83,3 @@ vim.keymap.set('n', '<leader>ot', ':ObsidianTemplate<CR>', { desc = 'Use templat
 -- Terminal keymaps
 -- Exit insert mode within Terminal
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit insert mode within Terminal' })
--- Toggle terminal new tab and add it to harpoon
-vim.keymap.set('n', '<leader>;', ':tab term<CR> <leader>a', { desc = 'Toggle terminal new tab' })
