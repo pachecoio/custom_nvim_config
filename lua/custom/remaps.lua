@@ -83,3 +83,6 @@ vim.keymap.set('n', '<leader>ot', ':ObsidianTemplate<CR>', { desc = 'Use templat
 -- Terminal keymaps
 -- Exit insert mode within Terminal
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit insert mode within Terminal' })
+
+-- Trouble keymaps
+vim.keymap.set('n', '<leader>dt', ':TroubleToggle<CR>', { desc = 'Toggle trouble' })
