@@ -86,3 +86,10 @@ vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit insert mode within Te
 
 -- Trouble keymaps
 vim.keymap.set('n', '<leader>dt', ':TroubleToggle<CR>', { desc = 'Toggle trouble' })
+
+-- Leap keymaps
+require('leap').create_default_mappings()
+
+require('leap').opts.special_keys.prev_target = '<bs>'
+require('leap').opts.special_keys.prev_group = '<bs>'
+-- require('leap').set_repeat_keys('<cr>', '<bs>')

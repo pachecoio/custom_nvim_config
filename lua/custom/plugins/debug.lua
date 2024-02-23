@@ -41,6 +41,7 @@ return {
         'delve',
         'elixir-ls',
         'python',
+        'node-debug2-adapter'
       },
     }
 
@@ -88,5 +89,26 @@ return {
 
     -- Install golang specific config
     require('dap-go').setup()
+
+    -- Install nodejs specific config
+    dap.adapters.node2 = {
+      type = 'executable',
+      command = 'node-debug2-adapter',
+      args = {}
+    }
+
+    dap.configurations.javascript = {
+      {
+        type = 'node2',
+        request = 'launch',
+        name = 'Launch Program',
+        program = '${file}',
+        cwd = vim.fn.getcwd(),
+        sourceMaps = true,
+        protocol = 'inspector',
+        console = 'integratedTerminal',
+      },
+    }
+
   end,
 }
