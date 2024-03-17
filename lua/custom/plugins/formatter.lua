@@ -40,6 +40,13 @@ return {
           end,
         },
 
+        -- formatter configurations for python
+        python = {
+          -- "formatter.filetypes.python" defines default configurations for the
+          -- "python" filetype
+          require('formatter.filetypes.python').black,
+        },
+
         -- Use the special "*" filetype for defining formatter configurations on
         -- any filetype
         ['*'] = {
@@ -49,9 +56,9 @@ return {
         },
         --
         -- Ignore filetypes by adding them to this list
-        ignore = {
-          'yaml',
-        },
+        -- ignore = {
+        --   'yaml',
+        -- },
 
       },
     }

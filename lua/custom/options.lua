@@ -40,8 +40,6 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
-
-
 -- Custom options
 
 vim.opt.relativenumber = true
@@ -71,3 +69,17 @@ vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 99
 
 vim.opt.list = true
+
+-- Clipboard config ubuntu
+vim.g.clipboard = {
+    name = "unnamedplus",
+    copy = {
+        ["+"] = "xclip -selection clipboard",
+        ["*"] = "xclip -selection clipboard"
+    },
+    paste = {
+        ["+"] = "xclip -selection clipboard -o",
+        ["*"] = "xclip -selection clipboard -o"
+    },
+    cache_enabled = 1
+}
