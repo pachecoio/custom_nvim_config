@@ -21,7 +21,7 @@ return {
       workspaces = {
         {
           name = "General",
-          path = "~/Library/Mobile Documents/com~apple~CloudDocs/Desktop/vault/personal",
+          path = "~/.vault/personal",
         },
       },
     },
