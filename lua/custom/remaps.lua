@@ -96,3 +96,80 @@ require('leap').opts.special_keys.prev_group = '<bs>'
 
 -- Set remap to change current file to executable
 vim.keymap.set('n', '<leader>cx', ':!chmod +x %<CR>', { desc = 'Make file executable' })
+
+local rename_file = function()
+    local old = vim.fn.expand('%')
+    local new = vim.fn.input('New name: ', vim.fn.expand('%:t'), 'file')
+    vim.fn.system('mv ' .. old .. ' ' .. new)
+    vim.cmd('e ' .. vim.fn.expand('%'))
+    vim.fn.system('rm -f ' .. old)
+end
+
+-- Create a new file in the specified path
+-- It will start autocompleting the path with the current file path
+local new_file = function()
+    local full_path = vim.fn.expand('%:p:h')
+    local new_file = vim.fn.input('New file: ', full_path, 'file')
+    vim.cmd('e ' .. new_file)
+end
+
+-- rename current file
+vim.keymap.set(
+    'n',
+    '<leader>fr',
+    function()
+        rename_file()
+    end,
+    { desc = 'Rename current file' }
+)
+
+-- create new file
+vim.keymap.set(
+    'n',
+    '<leader>fn',
+    function()
+        new_file()
+    end,
+    { desc = 'Create new file' }
+)
+
+vim.keymap.set('n', '<leader>ww', ':w<CR>', { desc = 'Save current file' })
+-- source current file
+vim.keymap.set('n', '<leader>fs', ':source %<CR>', { desc = 'Source current file' })
+
+-- Workspace delete current file
+-- should ask for confirmation
+local delete_file = function()
+    local file = vim.fn.expand('%')
+    local confirm = vim.fn.input('Delete ' .. file .. '? (y/n): ')
+    if confirm == 'y' then
+        vim.fn.system('rm -f ' .. file)
+        vim.cmd('bd')
+    end
+end
+
+vim.keymap.set(
+    'n',
+    '<leader>fd',
+    function()
+        delete_file()
+    end,
+    { desc = 'Delete current file' }
+)
+
+-- Move current file
+local move_file = function()
+    local old = vim.fn.expand('%')
+    local new = vim.fn.input('Move to: ', vim.fn.expand('%:p:h'), 'file')
+    vim.fn.system('mv ' .. old .. ' ' .. new)
+    vim.cmd('e ' .. vim.fn.expand('%'))
+end
+
+vim.keymap.set(
+    'n',
+    '<leader>fm',
+    function()
+        move_file()
+    end,
+    { desc = 'Move current file' }
+)
