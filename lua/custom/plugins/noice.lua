@@ -31,5 +31,8 @@ return {
         lsp_doc_border = false,       -- add a border to hover docs and signature help
       },
     })
+
+    -- dismiss with esc
+    vim.api.nvim_set_keymap("n", "<esc>", ":Noice dismiss<CR>", { noremap = true, silent = true })
   end,
 }
