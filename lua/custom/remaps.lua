@@ -173,3 +173,20 @@ vim.keymap.set(
     end,
     { desc = 'Move current file' }
 )
+
+-- This function triggers the cht cli tool
+-- It will open a terminal and ask for a cheatsheet
+-- It opens on insert mode
+local trigger_cheatsheet = function()
+    vim.cmd('startinsert')
+    vim.cmd('terminal cht')
+end
+
+-- Open cheatsheet cli tool terminal
+-- Asks for selection
+vim.keymap.set(
+    'n',
+    '<leader>cs',
+    trigger_cheatsheet,
+    { desc = 'Open cheatsheet' }
+)
