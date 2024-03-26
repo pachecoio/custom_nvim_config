@@ -224,7 +224,7 @@ require('custom.remaps')
 require('custom.harpoon')
 
 -- Set colorscheme
-vim.cmd [[colorscheme tokyonight-night]]
+vim.cmd [[colorscheme catppuccin-mocha]]
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
