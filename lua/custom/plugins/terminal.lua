@@ -17,8 +17,8 @@ return {
           border = "curved",
           winblend = 3,
           highlights = {
-            border = "normal",
-            background = "normal",
+            border = "dark",
+            background = "dark",
           },
         },
       }
